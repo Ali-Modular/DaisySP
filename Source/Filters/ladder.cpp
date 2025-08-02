@@ -90,7 +90,11 @@ float LadderFilter::Process(float in)
     return total;
 }
 
+#ifdef _MSC_VER
+void
+#else
 __attribute__((optimize("unroll-loops"))) void
+#endif
 LadderFilter::ProcessBlock(float* buf, size_t size)
 {
     for(size_t i = 0; i < size; i++)

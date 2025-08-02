@@ -52,7 +52,10 @@ set_target_properties(DaisySP PROPERTIES PUBLIC
   CXX_STANDARD_REQUIRED
   )
 
-
+target_compile_definitions(DaisySP
+    PUBLIC
+        _USE_MATH_DEFINES=1)
+		
 target_include_directories(DaisySP PUBLIC
   ${CMAKE_CURRENT_LIST_DIR}/Source
   PRIVATE
