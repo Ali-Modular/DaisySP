@@ -57,6 +57,7 @@ void AdEnv::Init(float sample_rate)
     min_             = 0.0f;
     max_             = 1.0f;
     output_          = 0.0001f;
+    trigger_         = 0;
     for(uint8_t i = 0; i < ADENV_SEG_LAST; i++)
     {
         segment_time_[i] = 0.05f;
